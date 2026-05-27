@@ -1,56 +1,29 @@
 #include <stdio.h>
+#include "function_multiplicar.c"
+    int main(){
+    int input = 0;
+    int numero1;
+    int numero2;
 
-int main() {
-    int opcao;
-    float num1, num2, resultado;
-    char continuar;
+    printf("Calculadora\n\n");
 
-    do {
-        printf("\n--- MENU CALCULADORA ---\n");
-        printf("1. Soma\n");
-        printf("2. Subtracao\n");
-        printf("3. Divisao\n");
-        printf("4. Multiplicacao\n");
-        printf("Escolha uma opcao (1-4): ");
-        scanf("%d", &opcao);
+    printf("1 - soma\n");
 
-        if (opcao >= 1 && opcao <= 4) {
-            printf("Digite o primeiro numero: ");
-            scanf("%f", &num1);
-            printf("Digite o segundo numero: ");
-            scanf("%f", &num2);
+    printf("2 - subtraçaõ\n");
 
-            if (opcao == 1) {
-                resultado = num1 + num2;
-                printf("Resultado da Soma: %.2f\n", resultado);
-            } 
-            else if (opcao == 2) {
-                resultado = num1 - num2;
-                printf("Resultado da Subtracao: %.2f\n", resultado);
-            }
-            else if (opcao == 3) {
-                if (num2 != 0) {
-                    resultado = num1 / num2;
-                    printf("Resultado da Divisao: %.2f\n", resultado);
-                } else {
-                    printf("Erro: Divisao por zero!\n");
-                }
-            }
-            else if (opcao == 4) {
-                resultado = num1 * num2; 
-                printf("Resultado da Multiplicacao: %.2f\n", resultado);
-            }
-        } 
-        else {
-            printf("Opcao invalida!\n");
-        }
+    printf("3 - divisão\n");
 
-        printf("\nDeseja executar outra operacao? (S para sim, N para sair): ");
-        scanf(" %c", &continuar);
+    printf("4 - multiplicação\n");
 
-    } while (continuar == 's' || continuar == 'S');
+    scanf("%d", &input);
 
-    printf("Programa encerrado.\n");
+    if(input == 4){
+        printf("\nDigite o priemiro numero: ");
+        scanf("%d", &numero1);
+        printf("\nDigite o segundo numero: ");
+        scanf("%d", &numero2);
 
-    return 0;
+        printf("Resultado é :%d", multiplicar(numero1, numero2));
+    }
+
 }
