@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include "function_multiplicar.c"
-    int main(){
+#include "function_dividir.c"
+
+
+int main()
+{
     int input = 0;
     int numero1;
     int numero2;
@@ -9,11 +13,11 @@
 
     printf("1 - soma\n");
 
-    printf("2 - subtraÁaı\n");
+    printf("2 - subtra√ßa√µ\n");
 
-    printf("3 - divis„o\n");
+    printf("3 - divis√£o\n");
 
-    printf("4 - multiplicaÁ„o\n");
+    printf("4 - multiplica√ß√£o\n");
 
     scanf("%d", &input);
 
@@ -23,7 +27,7 @@
         printf("\nDigite o segundo numero: ");
         scanf("%d", &numero2);
 
-        printf("Resultado È :%d", multiplicar(numero1, numero2));
+        printf("Resultado √© :%d", multiplicar(numero1, numero2));
     }
 
 }
